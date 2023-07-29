@@ -16,7 +16,7 @@ public class Spill : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Vector3.Angle(Vector3.down, transform.forward) <= 90f)
+        if(Vector3.Angle(Vector3.down, transform.forward) <= 70f)
         {
             myParticleSystem.Play();
         }
