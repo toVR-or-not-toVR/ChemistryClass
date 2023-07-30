@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Spill : MonoBehaviour
 {
+    public bool isSpilled = false;
     ParticleSystem myParticleSystem;
 
     // Start is called before the first frame update
@@ -16,13 +17,15 @@ public class Spill : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Vector3.Angle(Vector3.down, transform.forward) <= 70f)
+        if(Vector3.Angle(Vector3.down, transform.forward) <= 60f)
         {
             myParticleSystem.Play();
+            isSpilled = true;
         }
         else
         {
             myParticleSystem.Stop();
+            isSpilled = false;
         }
     }
 }
